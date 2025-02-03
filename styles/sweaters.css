@@ -1,0 +1,1087 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    overflow-x: hidden;
+}
+
+.button-menuThird{
+    cursor: pointer;
+    opacity: 0;
+    height: 40px;
+    width: 40px;
+    background-color: #000000;
+    position: relative;
+    left: 10px;
+    top: 10px;
+    border:none;
+    border-radius:7px;
+    z-index: 4;
+}
+
+button.button-menuThird span{
+    position: absolute;
+    height: 3px;
+    width: 30px;
+    background-color:#ffffff;
+    left: 5px;
+}
+
+button.button-menuThird span:nth-child(1){
+    transform: translateY(-10px);
+}
+
+button.button-menuThird span:nth-child(3){
+    transform: translateY(10px);
+}
+
+.mobile-menuThird.active .button-menuThird:hover{
+    background-color: #fff;
+    transition: background-color 1s;
+    span:nth-child(1){
+        transform:translateY(0px) rotate(45deg);
+        background-color: #000000;
+        transition: transform 0.7s, background-color 0.7s;
+    }
+    span:nth-child(2){
+        opacity: 0;
+        background-color: #000000;
+        transition: opacity 0.7s, background-color 0.7s;
+    }
+    span:nth-child(3){
+        transform: translateY(0px) rotate(-45deg);
+        background-color: #000000;
+        transition: transform 0.7s, background-color 0.7s;
+    }
+}
+
+.panelThird{
+    display: none;
+    position: absolute;
+    width: cover;
+    height: fit-content;
+    background-color: rgb(255, 255, 255);
+    top: -1px;
+    z-index: 3;
+}
+
+.panelThird a{
+    display: flex;
+    text-decoration: none;
+    color: #000;
+    line-height: 100px;
+    justify-content: center;
+    margin:45px;
+    font-family: "Arimo", serif;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.screen-name{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.screen-name h1{
+    position: relative;
+    right: 13px;
+    font-family: "Arimo", serif;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+.nav-menu{
+    font-family: "Arimo", serif;    
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-menu a{
+    font-family: "Arimo", serif;
+    text-decoration: none;
+    padding-right: 60px;
+    font-size: 25px;
+    font-weight: 500;
+    color: #000000;
+}
+
+.nav-menu a:hover{
+    color: rgb(204, 204, 204);
+    scale: 110%;
+    transition: color 0.7s, scale 0.9s;
+} 
+
+.main{
+    height: 1300px;
+}
+
+/* FirstModal */
+
+.modalScreen{
+    display:none;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed; 
+    left: -1px;
+    top: -1px; 
+    width: 2000px;
+    height: 1000px; 
+    z-index: 2;
+}
+
+.modalWindowFirst{
+position: relative;
+height: 700px;
+width: 800px;
+top: 20px;
+left: 550px;
+background-color: #ffffff;
+color:black;
+font-family: "Arimo", serif;
+border-radius:20px
+}
+
+p.description{
+position: absolute;
+bottom: 40px;
+font-size: 23px;
+line-height: 40px;
+}
+
+.modalWindowFirst img{
+height: 400px;
+width: 400px;
+position: relative;
+right: 170px;
+}
+
+.modalBtn{
+position: absolute;
+bottom: 420px;
+right:110px;
+width: 170px;
+height: 60px;
+border: 2px solid black;
+border-radius: 60px;
+background-color: #000;
+color: #fff;
+font-family: "Arimo", serif;
+font-size: large;
+font-weight: 600;
+}
+
+.modalWindowFirst button:hover{
+cursor: pointer;
+background-color: rgb(255, 255, 255);
+color:#000;
+transition: 1s;
+}
+
+p.price{
+position: absolute;
+top: 140px;
+right: 150px;
+font-size: 2rem;
+}
+
+.modalScreen.active {
+display: block;
+}
+
+.modalClose-btn{
+cursor: pointer;
+height: 40px;
+width: 40px;
+background-color: #000000;
+border:none;
+border-radius:7px;
+position: relative;
+left: -800px;
+top: 10px;
+}
+
+.modalClose-btn span{
+position: absolute;
+height: 3px;
+width: 30px;
+background-color:#ffffff;
+left: 5px;
+}
+
+.modalClose-btn span:nth-child(1){
+transform: rotate(45deg);
+}
+
+.modalClose-btn span:nth-child(2){
+transform: rotate(-45deg);
+}
+
+/* SecondModal */
+
+.modalScreenSecond{
+display:none;
+background: rgba(0, 0, 0, 0.8);
+position: fixed; 
+left: -1px;
+top: -1px; 
+width: 2000px;
+height: 1000px; 
+z-index: 2;
+}
+
+.modalWindowSecond{
+position: relative;
+height: 700px;
+width: 800px;
+top: 20px;
+left: 550px;
+background-color: #ffffff;
+color:black;
+font-family: "Arimo", serif;
+border-radius:20px
+}
+
+.modalWindowSecond img{
+height: 400px;
+width: 400px;
+position: relative;
+right: 170px;
+}
+
+.modalWindowSecond button:hover{
+cursor: pointer;
+background-color: rgb(255, 255, 255);
+color:#000;
+transition: 1s;
+}
+
+
+.modalScreenSecond.active {
+display: block;
+}
+
+.modalClose-btnSecond{
+cursor: pointer;
+height: 40px;
+width: 40px;
+background-color: #000000;
+border:none;
+border-radius:7px;
+position: relative;
+left: -800px;
+top: 10px;
+}
+
+.modalClose-btnSecond span{
+position: absolute;
+height: 3px;
+width: 30px;
+background-color:#ffffff;
+left: 5px;
+}
+
+.modalClose-btnSecond span:nth-child(1){
+transform: rotate(45deg);
+}
+
+.modalClose-btnSecond span:nth-child(2){
+transform: rotate(-45deg);
+}
+
+/* ThirdModal */
+
+.modalScreenThird{
+display:none;
+background: rgba(0, 0, 0, 0.8);
+position: fixed; 
+left: -1px;
+top: -1px; 
+width: 2000px;
+height: 1000px; 
+z-index: 2;
+}
+
+.modalWindowThird{
+position: relative;
+height: 700px;
+width: 800px;
+top: 20px;
+left: 550px;
+background-color: #ffffff;
+color:black;
+font-family: "Arimo", serif;
+border-radius:20px
+}
+
+.modalWindowThird img{
+height: 400px;
+width: 400px;
+position: relative;
+right: 170px;
+}
+
+.modalWindowThird button:hover{
+cursor: pointer;
+background-color: rgb(255, 255, 255);
+color:#000;
+transition: 1s;
+}
+
+
+.modalScreenThird.active {
+display: block;
+}
+
+.modalClose-btnThird{
+cursor: pointer;
+height: 40px;
+width: 40px;
+background-color: #000000;
+border:none;
+border-radius:7px;
+position: relative;
+left: -800px;
+top: 10px;
+}
+
+.modalClose-btnThird span{
+position: absolute;
+height: 3px;
+width: 30px;
+background-color:#ffffff;
+left: 5px;
+}
+
+.modalClose-btnThird span:nth-child(1){
+transform: rotate(45deg);
+}
+
+.modalClose-btnThird span:nth-child(2){
+transform: rotate(-45deg);
+}
+
+/* FourthModal */
+
+.modalScreenFourth{
+display:none;
+background: rgba(0, 0, 0, 0.8);
+position: fixed; 
+left: -1px;
+top: -1px; 
+width: 2000px;
+height: 1000px; 
+z-index: 2;
+}
+
+.modalWindowFourth{
+position: relative;
+height: 700px;
+width: 800px;
+top: 20px;
+left: 550px;
+background-color: #ffffff;
+color:black;
+font-family: "Arimo", serif;
+border-radius:20px
+}
+
+.modalWindowFourth img{
+height: 400px;
+width: 400px;
+position: relative;
+right: 170px;
+}
+
+.modalWindowFourth button:hover{
+cursor: pointer;
+background-color: rgb(255, 255, 255);
+color:#000;
+transition: 1s;
+}
+
+
+.modalScreenFourth.active {
+display: block;
+}
+
+.modalClose-btnFourth{
+cursor: pointer;
+height: 40px;
+width: 40px;
+background-color: #000000;
+border:none;
+border-radius:7px;
+position: relative;
+left: -800px;
+top: 10px;
+}
+
+.modalClose-btnFourth span{
+position: absolute;
+height: 3px;
+width: 30px;
+background-color:#ffffff;
+left: 5px;
+}
+
+.modalClose-btnFourth span:nth-child(1){
+transform: rotate(45deg);
+}
+
+.modalClose-btnFourth span:nth-child(2){
+transform: translateY(-45deg);
+}
+
+/* FifthModal */
+
+.modalScreenFifth{
+display:none;
+background: rgba(0, 0, 0, 0.8);
+position: fixed; 
+left: -1px;
+top: -1px; 
+width: 2000px;
+height: 1000px; 
+z-index: 2;
+}
+
+.modalWindowFifth{
+position: relative;
+height: 700px;
+width: 800px;
+top: 20px;
+left: 550px;
+background-color: #ffffff;
+color:black;
+font-family: "Arimo", serif;
+border-radius:20px
+}
+
+.modalWindowFifth img{
+height: 400px;
+width: 400px;
+position: relative;
+right: 170px;
+}
+
+.modalWindowFifth button:hover{
+cursor: pointer;
+background-color: rgb(255, 255, 255);
+color:#000;
+transition: 1s;
+}
+
+.modalScreenFifth.active {
+display: block;
+}
+
+.modalClose-btnFifth{
+cursor: pointer;
+height: 40px;
+width: 40px;
+background-color: #000000;
+border:none;
+border-radius:7px;
+position: relative;
+left: -800px;
+top: 10px;
+}
+
+.modalClose-btnFifth span{
+position: absolute;
+height: 3px;
+width: 30px;
+background-color:#ffffff;
+left: 5px;
+}
+
+.modalClose-btnFifth span:nth-child(1){
+transform: rotate(45deg);
+}
+
+.modalClose-btnFifth span:nth-child(2){
+transform: rotate(-45deg);
+}
+
+/* SixthModal */
+
+.modalScreenSixth{
+display:none;
+background: rgba(0, 0, 0, 0.8);
+position: fixed; 
+left: -1px;
+top: -1px; 
+width: 2000px;
+height: 1000px; 
+z-index: 2;
+}
+
+.modalWindowSixth{
+position: relative;
+height: 700px;
+width: 800px;
+top: 20px;
+left: 550px;
+background-color: #ffffff;
+color:black;
+font-family: "Arimo", serif;
+border-radius:20px
+}
+
+.modalWindowSixth img{
+height: 400px;
+width: 400px;
+position: relative;
+right: 170px;
+}
+
+.modalWindowSixth button:hover{
+cursor: pointer;
+background-color: rgb(255, 255, 255);
+color:#000;
+transition: 1s;
+}
+
+.modalScreenSixth.active {
+display: block;
+}
+
+.modalClose-btnSixth{
+cursor: pointer;
+height: 40px;
+width: 40px;
+background-color: #000000;
+border:none;
+border-radius:7px;
+position: relative;
+left: -800px;
+top: 10px;
+}
+
+.modalClose-btnSixth span{
+position: absolute;
+height: 3px;
+width: 30px;
+background-color:#ffffff;
+left: 5px;
+}
+
+.modalClose-btnSixth span:nth-child(1){
+transform: rotate(45deg);
+}
+
+.modalClose-btnSixth span:nth-child(2){
+transform: rotate(-45deg);
+}
+
+/* SeventhModal */
+
+.modalScreenSeventh{
+display:none;
+background: rgba(0, 0, 0, 0.8);
+position: fixed; 
+left: -1px;
+top: -1px; 
+width: 2000px;
+height: 1000px; 
+z-index: 2;
+}
+
+.modalWindowSeventh{
+position: relative;
+height: 700px;
+width: 800px;
+top: 20px;
+left: 550px;
+background-color: #ffffff;
+color:black;
+font-family: "Arimo", serif;
+border-radius:20px
+}
+
+.modalWindowSeventh img{
+height: 400px;
+width: 400px;
+position: relative;
+right: 170px;
+}
+
+.modalWindowSeventh button:hover{
+cursor: pointer;
+background-color: rgb(255, 255, 255);
+color:#000;
+transition: 1s;
+}
+
+.modalScreenSeventh.active {
+display: block;
+}
+
+.modalClose-btnSeventh{
+cursor: pointer;
+height: 40px;
+width: 40px;
+background-color: #000000;
+border:none;
+border-radius:7px;
+position: relative;
+left: -800px;
+top: 10px;
+}
+
+.modalClose-btnSeventh span{
+position: absolute;
+height: 3px;
+width: 30px;
+background-color:#ffffff;
+left: 5px;
+}
+
+.modalClose-btnSeventh span:nth-child(1){
+transform: rotate(45deg);
+}
+
+.modalClose-btnSeventh span:nth-child(2){
+transform: rotate(-45deg);
+}
+
+/* EighthModal */
+
+.modalScreenEighth{
+display:none;
+background: rgba(0, 0, 0, 0.8);
+position: fixed; 
+left: -1px;
+top: -1px; 
+width: 2000px;
+height: 1000px; 
+z-index: 2;
+}
+
+.modalWindowEighth{
+position: relative;
+height: 700px;
+width: 800px;
+top: 20px;
+left: 550px;
+background-color: #ffffff;
+color:black;
+font-family: "Arimo", serif;
+border-radius:20px
+}
+
+.modalWindowEighth img{
+height: 400px;
+width: 400px;
+position: relative;
+right: 170px;
+}
+
+.modalWindowEighth button:hover{
+cursor: pointer;
+background-color: rgb(255, 255, 255);
+color:#000;
+transition: 1s;
+}
+
+.modalScreenEighth.active {
+display: block;
+}
+
+.modalClose-btnEighth{
+cursor: pointer;
+height: 40px;
+width: 40px;
+background-color: #000000;
+border:none;
+border-radius:7px;
+position: relative;
+left: -800px;
+top: 10px;
+}
+
+.modalClose-btnEighth span{
+position: absolute;
+height: 3px;
+width: 30px;
+background-color:#ffffff;
+left: 5px;
+}
+
+.modalClose-btnEighth span:nth-child(1){
+transform: rotate(45deg);
+}
+
+.modalClose-btnEighth span:nth-child(2){
+transform: rotate(-45deg);
+}
+
+/* EighthModal */
+
+.modalScreenNinth{
+display:none;
+background: rgba(0, 0, 0, 0.8);
+position: fixed; 
+left: -1px;
+top: -1px; 
+width: 2000px;
+height: 1000px; 
+z-index: 2;
+}
+
+.modalWindowNinth{
+position: relative;
+height: 700px;
+width: 800px;
+top: 20px;
+left: 550px;
+background-color: #ffffff;
+color:black;
+font-family: "Arimo", serif;
+border-radius:20px
+}
+
+.modalWindowNinth img{
+height: 400px;
+width: 400px;
+position: relative;
+right: 170px;
+}
+
+.modalWindowNinth button:hover{
+cursor: pointer;
+background-color: rgb(255, 255, 255);
+color:#000;
+transition: 1s;
+}
+
+.modalScreenNinth.active {
+display: block;
+}
+
+.modalClose-btnNinth{
+cursor: pointer;
+height: 40px;
+width: 40px;
+background-color: #000000;
+border:none;
+border-radius:7px;
+position: relative;
+left: -800px;
+top: 10px;
+}
+
+.modalClose-btnNinth span{
+position: absolute;
+height: 3px;
+width: 30px;
+background-color:#ffffff;
+left: 5px;
+}
+
+.modalClose-btnNinth span:nth-child(1){
+transform: rotate(45deg);
+}
+
+.modalClose-btnNinth span:nth-child(2){
+transform: rotate(-45deg);
+}
+
+.cards-sweaters{
+    position: relative;
+    right: 18px;
+    bottom: 50px;
+    height: 1300px;
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    align-items:center;
+    font-family: "Arimo", serif;
+    font-size: 18px;
+}
+
+
+.cardFirst img{
+    width: 250px;
+    height: 250px;
+    
+}
+.cardSecond img{
+    width: 250px;
+    height: 250px;
+    
+}
+
+.cardThird img{
+    width: 250px;
+    height: 250px;
+}
+
+.cardFourth img{
+    width: 250px;
+    height: 250px;
+    
+}
+
+.cardFifth img{
+    width: 250px;
+    height: 250px;
+    
+}
+
+.cardSixth img{
+    width: 250px;
+    height: 250px;
+}
+
+.cardSeventh img{
+    width: 250px;
+    height: 250px;
+}
+
+.cardEighth img{
+    width: 250px;
+    height: 250px;
+}
+
+.cardNinth img{
+    width: 250px;
+    height: 250px;
+}
+
+.cardFirst button{
+    border:none;
+    border-radius:20px;
+    background-color:white;
+    font-family: "Arimo", serif;
+    font-size: 18px;
+}
+
+.cardSecond button{
+    border:none;
+    border-radius:20px;
+    background-color:white;
+    font-family: "Arimo", serif;
+    font-size: 18px;
+}
+
+.cardThird button{
+    border:none;
+    border-radius:20px;
+    background-color:white;
+    font-family: "Arimo", serif;
+    font-size: 18px;
+}
+
+.cardFourth button{
+    border:none;
+    border-radius:20px;
+    background-color:white;
+    font-family: "Arimo", serif;
+    font-size: 18px;
+}
+
+
+.cardFifth button{
+    border:none;
+    border-radius:20px;
+    background-color:white;
+    font-family: "Arimo", serif;
+    font-size: 18px;
+}
+
+.cardSixth button{
+    border:none;
+    border-radius:20px;
+    background-color:white;
+    font-family: "Arimo", serif;
+    font-size: 18px;
+}
+
+.cardSeventh button{
+    border:none;
+    border-radius:20px;
+    background-color:white;
+    font-family: "Arimo", serif;
+    font-size: 18px;
+}
+
+.cardEighth button{
+    border:none;
+    border-radius:20px;
+    background-color:white;
+    font-family: "Arimo", serif;
+    font-size: 18px;
+}
+
+.cardNinth button{
+    border:none;
+    border-radius:20px;
+    background-color:white;
+    font-family: "Arimo", serif;
+    font-size: 18px;
+}
+
+.cardFirst:hover{
+    box-shadow: 5px 10px 10px 0px rgba(0, 0, 0, 0.5);
+    transition: 1.2s;
+    border-radius: 20px;
+    scale: 105%;
+}
+
+.cardSecond:hover{
+    box-shadow: 5px 10px 10px 0px rgba(0, 0, 0, 0.5);
+    transition: 1.2s;
+    border-radius: 20px;
+    scale: 105%;
+}
+
+.cardThird:hover{
+    box-shadow: 5px 10px 10px 0px rgba(0, 0, 0, 0.5);
+    transition: 1.2s;
+    border-radius: 20px;
+    scale: 105%;
+}
+
+.cardFourth:hover{
+    box-shadow: 5px 10px 10px 0px rgba(0, 0, 0, 0.5);
+    transition: 1.2s;
+    border-radius: 20px;
+    scale: 105%;
+}
+
+.cardFifth:hover{
+    box-shadow: 5px 10px 10px 0px rgba(0, 0, 0, 0.5);
+    transition: 1.2s;
+    border-radius: 20px;
+    scale: 105%;
+}
+
+.cardSixth:hover{
+    box-shadow: 5px 10px 10px 0px rgba(0, 0, 0, 0.5);
+    transition: 1.2s;
+    border-radius: 20px;
+    scale: 105%;
+}
+
+.cardSeventh:hover{
+    box-shadow: 5px 10px 10px 0px rgba(0, 0, 0, 0.5);
+    transition: 1.2s;
+    border-radius: 20px;
+    scale: 105%;
+}
+
+.cardEighth:hover{
+    box-shadow: 5px 10px 10px 0px rgba(0, 0, 0, 0.5);
+    transition: 1.2s;
+    border-radius: 20px;
+    scale: 105%;
+}
+
+.cardNinth:hover{
+    box-shadow: 5px 10px 10px 0px rgba(0, 0, 0, 0.5);
+    transition: 1.2s;
+    border-radius: 20px;
+    scale: 105%;
+}
+
+.footer{
+    height: 600px;
+    background-color: #1f1f1f;
+    font-family:"Arimo", serif;
+}
+
+.footer img{
+    width: 3rem;
+    height: 3rem;
+}
+
+.social-media{
+    position: relative;
+    text-align: center;
+    top:120px;
+}
+
+.social-media a{
+    margin-right: 5px;
+}
+
+.footer p{
+    position: relative;
+    color:white;
+    text-align: center;
+    top: 170px;
+    line-height: 20px;
+}
+
+.footer h4{
+    color:white;
+    position: relative;
+    top: 150px;
+    text-align: center;
+    font-size: 1.9rem;
+}
+
+@media (max-width: 1000px) {
+    .screen-name h1{
+        bottom: 70px;
+    }
+    .cards-sweaters{
+        bottom: 160px;
+    }
+    .button-menuThird{
+        opacity: 1;
+    }
+    .nav-menu a{
+        display: none;
+    }
+    .mobile-menuThird.active .panelThird{
+        display: block;
+    }
+    .main{
+        height: 1090px;
+    }
+}
+
+@media (max-width:920px) {
+    .cards-sweaters img{
+        width: 180px;
+        height: 180px;
+    }
+    .cards-sweaters p{
+        font-size: 14px;
+    }
+    .cards-sweaters{
+        top: -300px;
+    }
+    .main{
+        height: 800px;
+    }
+}
+
+@media (max-width:680px) {
+    .screen-name h1{
+        left: 10px;
+    }
+    .cards-sweaters{
+        flex-direction: column;
+        top: -20px;
+        left: 10px;
+    }
+    .cards-sweaters img{
+        width: 250px;
+        height: 250px;
+    }
+    .cards-sweaters p{
+        font-size: 18px;
+    }
+    .main{
+        height: 3000px;
+    }
+}

@@ -1,0 +1,533 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.wrapper{
+background-image: linear-gradient(0deg, rgba(156, 156, 156, 0.11) 14%, rgba(0,0,0,0.48503151260504207) 100%), url(images/bgc-mainScreen.jpg);
+    height: 960px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.main{
+    height: 880px;
+    background-repeat: no-repeat;
+}
+
+.header {
+    height: 150px;
+}
+
+.button-menu{
+    cursor: pointer;
+    opacity: 0;
+    height: 40px;
+    width: 40px;
+    background-color: #000000;
+    position: relative;
+    left: 10px;
+    top: 10px;
+    border:none;
+    border-radius:7px;
+    z-index: 4;
+}
+
+button.button-menu span{
+    position: absolute;
+    height: 3px;
+    width: 30px;
+    background-color:#ffffff;
+    left: 5px;
+}
+
+button.button-menu span:nth-child(1){
+    transform: translateY(-10px);
+}
+
+button.button-menu span:nth-child(3){
+    transform: translateY(10px);
+}
+
+.mobile-menu.active .button-menu:hover{
+    background-color: #fff;
+    transition: background-color 1s;
+    span:nth-child(1){
+        transform:translateY(0px) rotate(45deg);
+        background-color: #000000;
+        transition: transform 0.7s, background-color 0.7s;
+    }
+    span:nth-child(2){
+        opacity: 0;
+        background-color: #000000;
+        transition: opacity 0.7s, background-color 0.7s;
+    }
+    span:nth-child(3){
+        transform: translateY(0px) rotate(-45deg);
+        background-color: #000000;
+        transition: transform 0.7s, background-color 0.7s;
+    }
+}
+
+.panel{
+    display: none;
+    position: absolute;
+    width: cover;
+    height: fit-content;
+    background-color: rgb(255, 255, 255);
+    top: -1px;
+    z-index: 3;
+}
+
+.panel a{
+    display: flex;
+    text-decoration: none;
+    color: #000;
+    line-height: 100px;
+    justify-content: center;
+    margin:45px;
+    font-family: "Arimo", serif;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.header-nav-logo{
+    position: relative;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    gap: 100px;  
+}
+
+.header-nav-logo a{
+    font-family: "Arimo", serif;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 500;
+    color: black;
+}
+
+.header-nav-logo a:hover{
+    color: rgb(204, 204, 204);
+    transition: 0.7s;
+    scale: 110%;
+    transition: color 0.7s, scale 0.9s;
+}
+
+.header-nav-logo h1{
+    font-family: "Atma", serif;
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    text-align: center;
+}
+
+.description{
+    position: relative;
+    bottom:90px;
+    font-family: "Arimo", serif;
+    
+}
+
+.description h1{
+    font-family: "Arimo", serif;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+.description button{
+    width: 200px;
+    height: 60px;
+    position: relative;
+    /* left: 10px; */
+    border: 2px solid black;
+    border-radius: 60px;
+    background-color: #000;
+    color: #fff;
+    font-family: "Arimo", serif;
+    font-size: large;
+    font-weight: 600;
+}
+
+.description button:hover{
+    cursor: pointer;
+    background-color: rgb(204, 204, 204);
+    color:#000;
+    transition: 1.5s;
+    
+} 
+
+.section-info{
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    text-align: center;
+    background-color: #efe8e3;
+    font-family: "Arimo", serif;
+}
+
+.section-info h2{
+    font-size: 2rem;
+    line-height: 45px;
+    font-weight: lighter;
+}
+
+.section-info p{
+    position: relative;
+    top:35px;
+    font-weight: bold;
+}
+
+.all-products{
+    height: 1600px;
+}
+
+.all-clothes{
+    position: relative;
+    bottom: 100px;
+    height: 750px;
+    display: flex;
+    text-align: center;
+    /* flex-wrap: wrap; */
+    justify-content: space-evenly;
+    align-items:center;
+    font-family: "Arimo", serif;
+    font-size: 20px;
+}
+
+.trousers-category:hover{
+    box-shadow: 5px 10px 10px 0px rgba(0, 0, 0, 0.5);
+    transition: 1.2s;
+    border-radius: 20px;
+    scale: 105%;
+}
+
+.sweater-category:hover{
+    box-shadow: 5px 10px 10px 0px rgba(0, 0, 0, 0.5);
+    transition: 1.2s;
+    border-radius: 20px;
+    scale: 105%;
+}
+
+.overalls-category:hover{
+    box-shadow: 5px 10px 10px 0px rgba(0, 0, 0, 0.5);
+    transition: 1.2s;
+    border-radius: 20px;
+    scale: 105%;
+}
+
+.firsdtCard-toys:hover{
+    box-shadow: 5px 10px 10px 0px rgba(0, 0, 0, 0.5);
+    transition: 1.2s;
+    border-radius: 20px;
+    scale: 105%;
+}
+
+.secondCard-toys:hover{
+    box-shadow: 5px 10px 10px 0px rgba(0, 0, 0, 0.5);
+    transition: 1.2s;
+    border-radius: 20px;
+    scale: 105%;
+}
+
+.thirdCard-toys:hover{
+    box-shadow: 5px 10px 10px 0px rgba(0, 0, 0, 0.5);
+    transition: 1.2s;
+    border-radius: 20px;
+    scale: 105%;
+}
+
+.all-clothes img{
+    width: 400px;
+    height: 400px;
+}
+
+.name-category-first{
+    position: relative;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    top: 25px;
+    font-family: "Arimo", serif;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.all-toys{ 
+    position: relative;
+    bottom: 235px;
+    height: 750px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-evenly;
+    align-items:center;
+    font-family: "Arimo", serif;
+}
+
+.all-toys img{
+    width: 400px;
+    height: 400px;
+}
+
+.name-category-second{
+    position: relative;
+    bottom: 150px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    font-family: "Arimo", serif;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.order-toy-info{
+    position: relative;
+    bottom: 350px;
+    text-align: center;
+    font-family: "Arimo", serif;
+    font-size: 18px;
+}
+
+.btn-order-toy{
+    width: 200px;
+    height: 60px;
+    border: 2px solid black;
+    border-radius: 60px;
+    background-color: #000;
+    color: #fff;
+    font-family: "Arimo", serif;
+    font-size: large;
+    font-weight: 600;
+    position: relative;
+    top: 20px;
+}
+
+.btn-order-toy:hover{
+    cursor: pointer;
+    background-color: white;
+    color:#000;
+    transition: 1.5s;
+}
+
+.delivery{
+    height: 500px;
+    font-family: "Arimo", serif;
+    background-color:#efe8e3;
+    text-align: center;
+}
+
+.delivery h3{
+    position: relative;
+    top: 100px;
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.delivery p{
+    position: relative;
+    top: 150px;
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    line-height: 45px;
+}
+
+.footer{
+    height: 600px;
+    background-color: #1f1f1f;
+    font-family:"Arimo", serif;
+}
+
+.footer img{
+    width: 3rem;
+    height: 3rem;
+}
+
+.social-media{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top:120px;
+}
+
+.social-media a{
+    margin-right: 10px;
+}
+
+.footer p{
+    position: relative;
+    color:white;
+    text-align: center;
+    top: 170px;
+    line-height: 20px;
+}
+
+.footer h4{
+    color:white;
+    position: relative;
+    top: 150px;
+    text-align: center;
+    font-size: 1.9rem;
+}
+
+.firstSocial:hover{
+    scale: 110%;
+    transition: 0.9s;
+}
+
+.secondSocial:hover{
+    scale: 110%;
+    transition: 0.9s;
+}
+
+.thirdSocial:hover{
+    scale: 110%;
+    transition: 0.9s;
+}
+
+@media (max-width:1070px) {
+    .header-nav-logo {
+        gap: 80px;
+    }
+}
+
+@media (max-width:1200px) {
+    .all-clothes img{
+        height: 300px;
+        width: 300px;
+    }
+    .all-toys img{
+        height: 300px;
+        width: 300px;
+    }
+    .all-clothes{
+        top: 15px;
+    }
+    .name-category-first{
+        top: 110px;
+    }
+    .name-category-second{
+        top: -80px;
+    }
+}
+
+@media (max-width:900px){
+    .all-toys img{
+        height: 250px;
+        width: 250px;
+    }
+    .all-clothes img{
+        height: 250px;
+        width: 250px;
+    }
+}
+
+@media (max-width:830px) {
+    .all-clothes img{
+        height: 200px;
+        width: 200px;
+    }
+    .all-toys img{
+        height: 200px;
+        width: 200px;
+    }
+    .section-info h2{
+        font-size: 1.8rem;
+    }
+    .delivery h3{
+        font-weight: 500;
+    }
+    .delivery p{
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 740px){
+    .section-info h2{
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+    .delivery p{
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width:680px) {
+    .delivery p{
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+    .delivery h3{
+        font-weight: 400;
+    }
+}
+
+@media (max-width: 640px){
+    .section-info h2{
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width:620px){
+    .all-products{
+        height: 2000px;
+    }
+    .name-category-first{
+        top: 20px;
+    }
+    .all-clothes{
+        flex-direction: column;
+        top: 20px;
+    }
+    .name-category-second{
+        top: 80px;
+    }
+    .all-toys{
+        flex-direction: column;
+        top: 40px;
+    }
+    .order-toy-info{
+        top: 100px;
+    }
+    .delivery p{
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width:560px) {
+    .section-info h2{
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+    .delivery p{
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    .button-menu{
+        opacity: 1;
+    }
+    .header-nav-logo a{
+        display: none;
+    }
+    .mobile-menu.active .panel{
+            display: block;
+    }
+}
